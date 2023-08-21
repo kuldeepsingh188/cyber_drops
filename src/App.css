@@ -1,38 +1,834 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none !important;
 }
 
-.App-logo {
-  height: 40vmin;
+.custm_container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* ======== root ========== */
+:root {
+  --fs-xsm: 16px;
+  --fs-sm: 18px;
+  --fs-2xmd: 20px;
+  --fs-xmd: 24px;
+  --fs-md: 28px;
+  --fs-lg: 36px;
+  --fs-xl: 48px;
+  --fs-xxl: 72px;
+
+  --cl-fff: #fff;
+  --cl-F1AC73: #F1AC73;
+  --cl-0000: #000;
+}
+
+.fs_xsm {
+  font-size: var(--fs-xsm);
+}
+
+.fs_xm {
+  font-size: var(--fs-sm);
+}
+
+.fs_2xmd {
+  font-size: var(--fs-2xmd);
+}
+
+.fs_xmd {
+  font-size: var(--fs-xmd);
+}
+
+.fs_lg {
+  font-size: var(--fs-lg);
+}
+
+.fs_xl {
+  font-size: var(--fs-xl);
+}
+
+.fs_xxl {
+  font-size: var(--fs-xxl);
+}
+
+.cl_fff {
+  color: var(--cl-fff) !important;
+  transition: all 200ms linear;
+}
+
+.cl_F1AC73 {
+  color: var(--cl-F1AC73);
+}
+
+.cl_000 {
+  color: var(--cl-0000);
+}
+
+.ff_lato {
+  font-family: 'lato';
+}
+
+.loder {
+  z-index: 99;
+
+}
+
+.lr_br {
+  animation-name: loding;
+  animation-duration: 10000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loding {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============== Nav ============== */
+.bg_black {
+  background: #000;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.cl_chang {
+  transition: all 200ms ease-in;
+}
+
+.cl_chang:hover {
+  color: #F1AC73 !important;
+}
+
+.nav_cercle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  transition: all 200ms linear;
+}
+
+.nav_cercle:hover {
+  background: #F1AC73;
+}
+
+.wallet {
+  border-radius: 8px;
+  background: #F1AC73;
+  border: none;
+  transition: all 200ms linear;
+}
+
+.wallet:hover {
+  color: #F1AC73 !important;
+  background: #fff;
+}
+
+.nav_show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  transition: all 200ms linear;
+}
+
+.nav_fix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: -100%;
+  z-index: 4;
+  left: 0;
+  transition: all 200ms linear;
+}
+
+.crose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+/* ============ welcome =========== */
+
+.explore {
+  background: #F1AC73;
+  border-radius: 8px;
+  padding: 12px 25px;
+  transition: all 200ms linear;
+  border: none;
+}
+
+.explore:hover {
+  /* box-shadow: 10px 5px 8px #77b971; */
+  color: #F1AC73 !important;
+  background: #fff;
+}
+
+.key {
+  animation: move 2s linear infinite alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+
+}
+
+/* ================ partner ======= */
+.mt_1 {
+  margin-top: -1px;
+}
+
+.Bg_partner {
+  background-image: url(./assests/img/png/play_bit.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: 100% 100%;
+}
+
+.border_grarient {
+  background: linear-gradient(140.61deg,
+      rgba(0, 0, 0, 0) -1.87%,
+      rgba(0, 0, 0, 0) 105.41%);
+  backdrop-filter: blur(11px);
+  border-radius: 24.827px;
+  position: relative;
+}
+
+.border_grarient::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  padding: 5px;
+  border-radius: 24.827px;
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+div ::-webkit-scrollbar {
+  display: none;
+}
+
+.finance {
+  transform: translateY(-100%);
+}
+
+/* -------------------- algo ---------------------- */
+
+.grid_container {
+  display: grid;
+}
+
+.grid_item1 {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.grid_item2 {
+  grid-column: 3/5;
+  grid-row: 1/3;
+}
+
+.grid_item3 {
+  grid-column: 2/4;
+  grid-row: 3/5;
+}
+
+.grid_item4 {
+  grid-column: 4/6;
+  grid-row: 3/5;
+}
+
+.mt_38 {
+  margin-top: -38px;
+}
+
+.zoom_in {
+  transition: all 200ms linear;
+}
+
+.zoom_in:hover {
+  scale: 1.1;
+}
+
+/* -------------- WORK -------------- */
+.nft_card {
+  width: 300.722px;
+  height: 300.385px;
+  border-radius: 25px;
+  border: 3.73px solid;
+  background: linear-gradient(140.61deg,
+      rgba(0, 0, 0, 0) -1.87%,
+      rgba(0, 0, 0, 0) 105.41%);
+  backdrop-filter: blur(11px);
+  position: relative;
+  padding: 5px;
+  transition: all 400ms linear;
+}
+
+.nft_card::after {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+  transition: all 400ms linear;
+}
+
+.cercle {
+  width: 71.768px;
+  height: 71.768px;
+  border-radius: 50px;
+  background: #F1AC73;
+  transition: all 400ms linear;
+}
+
+.number {
+  transition: all 400ms linear;
+}
+
+.must {
+  max-width: 222px;
+}
+
+.nft_card:hover {
+  background: #F1AC73 !important;
+}
+
+.nft_card:hover .cercle {
+  background: #fff;
+}
+
+.nft_card:hover .cercle .number {
+  color: #F1AC73 !important;
+}
+
+.nft_card:hover:after {
+  background: #F1AC73 !important;
+}
+
+/* ------------------- TEAM -------------- */
+
+.img_card {
+  max-width: 525px;
+  border-radius: 25px;
+  background: #FFF;
+}
+
+.slick-prev:before {
+  font-size: 75px;
+}
+
+.slick-prev:before {
+  content: url(../src/assests/img/png/left_arrow.png) !important;
+  opacity: 1 !important;
+}
+
+.slick-prev {
+  left: -60px !important;
+}
+
+.slick-next:before {
+  content: url(../src/assests/img/png/righta_arrow.png) !important;
+  opacity: 1 !important;
+}
+
+.slick-prev {
+  left: -60px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 10px !important;
+  border: 1px solid white !important;
+  border-radius: 50px !important;
+  top: 15% !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: #fff !important;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute !important;
+  top: 38% !important;
+
+}
+
+/* .slick-dots {
+  bottom: -45px !important;
+} */
+
+/* ------------------- Road map --------------- */
+
+.roadmap_bg {
+  background-image: url(../src/assests/img/png/roadmap_bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  backdrop-filter: blur(140px);
+}
+
+.layer_1 {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  filter: blur(150px);
+  position: absolute;
+  top: -4%;
+}
+
+.layer_2 {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  filter: blur(150px);
+  position: absolute;
+  bottom: -2%;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: url(../src/assests/img/png/timeline.webp);
+  position: absolute;
+  height: 100%;
+  background-size: cover;
+  background-repeat: repeat-y;
+  /* border: 2px dashed #FFFFFF; */
+  /* background-color: white; */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.containar {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.containar::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  right: -30px;
+  top: -11px;
+  z-index: 1;
+}
+
+.timeline_img1::after {
+  content: url(../src/assests/img/png/ttimeline_img1.webp);
+}
+
+.timeline_img2::after {
+  content: url(../src/assests/img/png/timeline_img2.webp);
+}
+
+.timeline_img3::after {
+  content: url(../src/assests/img/png/timeline_img3.webp);
+}
+
+.timeline_img4::after {
+  content: url(../src/assests/img/png/timeline_img4.webp);
+}
+
+.timeline_img5::after {
+  content: url(../src/assests/img/png/timeline_img5.webp);
+}
+
+.timeline_img6::after {
+  content: url(../src/assests/img/png/timeline_img6.webp);
+}
+
+.timeline_img7::after {
+  content: url(../src/assests/img/png/timeline_img7.webp);
+}
+
+.timeline_img8::after {
+  content: url(../src/assests/img/png/timeline_img8.webp);
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: url(../src/assests/img/png/show_direction.png);
+  height: 0;
+  position: absolute;
+  top: 38%;
+  z-index: 1;
+  right: 30px;
+  transform: rotate(180deg);
+  border-color: white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: url(../src/assests/img/png/show_direction.png);
+  height: 0;
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+  left: 30px;
+  border-color: #FFF;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -40px;
+}
+
+/* The actual content */
+.content {
+  margin-top: -20px;
+  position: relative;
+}
+
+.dots {
+  content: '';
+  left: -9%;
+  width: 50.951px;
+  height: 50.948px;
+  border-radius: 13.951px;
+  background: #F1AC73;
+}
+
+/* --------------- ACCORDIAN ------------- */
+.accordion_border {
+  border: 1px solid transparent !important;
+  background-image: linear-gradient(#000000, #000000), linear-gradient(#F1AC73 40%, #15ABFF);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 10px;
+  backdrop-filter: blur(15px) !important;
+  max-width: 970px;
+}
+
+.accordion-button {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 25px !important;
+  height: 25px !important;
+  margin-left: auto;
+  margin-right: 20px;
+  content: "";
+  background-image: url(./assests/img/png/accordian_arrow.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  transform: rotate(90deg) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  border-color: transparent !important;
+  box-shadow: unset !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg) !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #212529;
+}
+
+/* ---------------- FOOTER ---------------- */
+.vivera {
+  max-width: 444px;
+}
+
+.algo_um1 {
+  position: absolute;
+  right: 0;
+  bottom: -15%;
+}
+
+.team_um1 {
+  position: absolute;
+  left: 0;
+  top: -11%;
+}
+
+.team_um2 {
+  position: absolute;
+  right: 0;
+  bottom: -40%;
+}
+
+.road_um1 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.road_um2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.road_um2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.accor_um1 {
+  position: absolute;
+  left: 0;
+}
+
+.shado1 {
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+  position: absolute;
+  z-index: 5;
+}
+
+.shado2 {
+  position: absolute;
+  top: 50%;
+  left: -1%;
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+}
+
+.shado3 {
+  position: absolute;
+  top: 50%;
+  right: -1%;
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+}
+
+.shado4 {
+  position: absolute;
+  top: 0;
+  left: -1%;
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+}
+
+.shado5 {
+  position: absolute;
+  top: 50%;
+  right: -1%;
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+}
+
+.shado6 {
+  position: absolute;
+  bottom: 0;
+  left: -1%;
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+}
+
+.shado7 {
+  position: absolute;
+  top: 30%;
+  right: -1%;
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+}
+
+.shado8 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+}
+
+.shado9 {
+  position: absolute;
+  top: 33%;
+  right: 0;
+  width: 182px;
+  height: 182px;
+  background: linear-gradient(180deg, #F1AC73 31.68%, #15ABFF 100%);
+  filter: blur(150px);
+}
+
+/* ------ BACK TO TOP ----------- */
+
+.circle {
+  position: fixed;
+  bottom: 25px;
+  right: 3%;
+  width: 75px;
+  height: 75px;
+  padding: 20px;
+  background: white;
+  border-radius: 50px;
+  z-index: 9;
+}
+
+@media (min-width:1400px) {
+  .circle {
+    position: fixed;
+    bottom: 25px;
+    right: 20%;
+    width: 75px;
+    height: 75px;
+    padding: 20px;
+    background: white;
+    border-radius: 50px;
+    z-index: 9;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 768px) {
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 55px;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* .translate_x{
+    transform: translateX(25%);
+  } */
+
+  /* Full-width containers */
+  .containar {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .containar::before {
+    left: 60px;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+
+  .left::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 17%;
+    z-index: 1;
+    right: 30px;
+    transform: rotate(0);
+    border-color: white;
+  }
+
+  .right::before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+    left: 30px;
+    border-color: #FFF;
+  }
+
+  :root {
+    --fs-md: 22px;
+    --fs-lg: 26px;
+    --fs-xl: 35px;
+    --fs-xxl: 52px;
   }
 }
