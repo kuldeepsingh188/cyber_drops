@@ -4,7 +4,6 @@ import ov_um5 from '../assests/img/png/overflow_umbrala.webp'
 const RoadMap = () => {
     return (
         <div className='bg_black py-sm-5 position-relative mt_1'>
-
             <div className='road_um1'><img src={ov_um4} alt="" /></div>
             <div className='road_um2'><img src={ov_um5} alt="" /></div>
             <div className='cutem_cantainer py-5'>
@@ -14,7 +13,6 @@ const RoadMap = () => {
                 <div className="layer_1"></div>
                 <div className="layer_2"></div>
                 <div class="timeline pt-2">
-
                     <div class="containar right timeline_img1">
                         <div class="content ps-sm-5 ms-lg-5">
                             <h2 className='cl_fff ff_lato m-0 ms-sm-5 ps-5 fs_xmd fw_semibold'>March 2022</h2>

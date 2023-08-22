@@ -7,7 +7,7 @@ const Lodaing = () => {
   }, 3000);
   return (
     <>
-      <div className='vh-100 w-100 d-flex justify-content-center align-items-center position-fixed top-0 start-0 loder' id="none" >
+      <div className='loder' id="none" >
         <span id="none" className='bg_black h-100 w-100 d-flex justify-content-center align-items-center '><img className='lr_br' src={logo} alt="" /></span>
       </div>
     </>

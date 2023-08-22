@@ -28,7 +28,6 @@ const Algo = () => {
                             </div>
                             <span className='ps-4'><img className='w-100 zoom_in' src={umbrala_sky} alt="" /></span>
                         </div>
-
                     </Col>
                 </Row>
             </div>

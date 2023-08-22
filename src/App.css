@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +26,6 @@
   --fs-lg: 36px;
   --fs-xl: 48px;
   --fs-xxl: 72px;
-
   --cl-fff: #fff;
   --cl-F1AC73: #F1AC73;
   --cl-0000: #000;
@@ -80,17 +78,16 @@
 
 .loder {
   z-index: 99;
-
 }
 
 .lr_br {
-  animation-name: loding;
+  animation-name: loading;
   animation-duration: 10000ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes loding {
+@keyframes loading {
   0% {
     transform: rotate(0deg);
   }
@@ -176,7 +173,6 @@
   right: 10px;
 }
 
-
 /* ============ welcome =========== */
 
 .explore {
@@ -188,7 +184,6 @@
 }
 
 .explore:hover {
-  /* box-shadow: 10px 5px 8px #77b971; */
   color: #F1AC73 !important;
   background: #fff;
 }
@@ -205,7 +200,6 @@
   100% {
     transform: rotate(-5deg);
   }
-
 }
 
 /* ================ partner ======= */
@@ -400,10 +394,6 @@ div ::-webkit-scrollbar {
 
 }
 
-/* .slick-dots {
-  bottom: -45px !important;
-} */
-
 /* ------------------- Road map --------------- */
 
 .roadmap_bg {
@@ -446,8 +436,6 @@ div ::-webkit-scrollbar {
   height: 100%;
   background-size: cover;
   background-repeat: repeat-y;
-  /* border: 2px dashed #FFFFFF; */
-  /* background-color: white; */
   top: 0;
   bottom: 0;
   left: 50%;
@@ -749,25 +737,11 @@ div ::-webkit-scrollbar {
   width: 75px;
   height: 75px;
   padding: 20px;
-  background: white;
+  background: #F1AC73;
   border-radius: 50px;
   z-index: 9;
+  display: none;
 }
-
-@media (min-width:1400px) {
-  .circle {
-    position: fixed;
-    bottom: 25px;
-    right: 20%;
-    width: 75px;
-    height: 75px;
-    padding: 20px;
-    background: white;
-    border-radius: 50px;
-    z-index: 9;
-  }
-}
-
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 768px) {
@@ -776,10 +750,6 @@ div ::-webkit-scrollbar {
   .timeline::after {
     left: 55px;
   }
-
-  /* .translate_x{
-    transform: translateX(25%);
-  } */
 
   /* Full-width containers */
   .containar {

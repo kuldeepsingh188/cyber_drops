@@ -6,7 +6,6 @@ import umbrala2 from '../assests/img/png/umbrela2.webp'
 const Welcome = () => {
     return (
         <div className='bg_black mt_1 position-relative overflow-hidden'>
-
             <div className='shado2'></div>
             <div className='shado3'></div>
             <div className='custm_container py-5 '>

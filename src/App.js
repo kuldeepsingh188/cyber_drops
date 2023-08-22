@@ -17,8 +17,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 import BackToTop from './components/BackToTop';
-// import { Routes, Route } from 'react-router-dom';
-// import HomePage from './components/view/HomePage';
 function App() {
 
   useEffect(() => {
@@ -28,17 +26,18 @@ function App() {
   return (
     <>
       <div className=' overflow-hidden'>
-          <Lodaing />
-          <NavBar />
-          <Welcome />
-          <Partner />
-          <Algo />
-          <Work />
-          <Team />
-          <RoadMap />
-          <Accordian />
-          <Footer />
-          <BackToTop />
+        <Lodaing />
+        <BackToTop />
+        <NavBar />
+        <Welcome />
+        <Partner />
+        <Algo />
+        <Work />
+        <Team />
+        <RoadMap />
+        <Accordian />
+        <Footer />
+
       </div>
     </>
   );

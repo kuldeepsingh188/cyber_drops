@@ -30,7 +30,6 @@ export const Discord = () => {
                     </clipPath>
                 </defs>
             </svg>
-
         </>
     )
 }
@@ -47,7 +46,6 @@ export const Discord_sl = () => {
                     </clipPath>
                 </defs>
             </svg>
-
         </>
     )
 }

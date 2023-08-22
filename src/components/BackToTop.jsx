@@ -1,5 +1,6 @@
 import React from 'react'
-import topbtn from '../assests/img/png/topUp.webp'
+import { Container } from 'react-bootstrap'
+import topup from "../assests/img/png/topUp.webp"
 
 const BackToTop = () => {
     const [position, setPosition] = React.useState({ top: 0, left: 0 })
@@ -11,7 +12,7 @@ const BackToTop = () => {
         })
     })
 
-    const [visibility, setVisibility] = React.useState(false)
+    // const [visibility, setVisibility] = React.useState(false)
     const scrollTop = React.useRef()
     React.useEffect(() => {
         window.addEventListener('scroll', (e) => {
@@ -19,17 +20,16 @@ const BackToTop = () => {
                 ? scrollTop.current.style.display = 'inline-block'
                 : scrollTop.current.style.display = 'none'
         })
-    })
+    }, [])
     return (
-        <>
-            <div className='custm_container position-relative'>
+        <div>
+            <Container>
                 <span
-                    onClick={() => setPosition({ ...position, position: { top: 0, left: 0 } })} className="circle d-flex justify-content-center align-items-center overflow-hidden"
+                    onClick={() => setPosition({ ...position, position: { top: 0, left: 0 } })} className="circle overflow-hidden"
                     ref={scrollTop}
-                ><img className='w-100 d-flex' src={topbtn} alt="topUp" /></span>
-            </div>
-        </>
-
+                ><img className='w-100 d-flex' src={topup} alt="topUp" /></span>
+            </Container>
+        </div>
     )
 }
 
